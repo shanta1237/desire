@@ -10289,7 +10289,7 @@ p {
 }
 @media (min-width: 1200px) {
   .heading-main-container .heading-main {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 .btn-white {
@@ -10314,7 +10314,7 @@ p {
   padding-left: 0;
 }
 .footer-section .footer-main .footer-heading {
-  font-size: calc(1.35rem + 1.2vw);
+  font-size: calc(1rem + 1.2vw);
   color: white;
 }
 @media (min-width: 1200px) {
@@ -10350,7 +10350,7 @@ p {
   margin-top: 1rem;
 }
 .footer-section .footer-main .text-col .useful-links ul li {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(0.9rem );
   margin-top: 0.25rem;
 }
 @media (min-width: 1200px) {
@@ -10385,7 +10385,7 @@ p {
   }
 }
 .footer-section .footer-bottom div.col-md-6.col-lg-4 p.font-bold.text-center {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   .footer-section .footer-bottom div.col-md-6.col-lg-4 p.font-bold.text-center {
@@ -10407,12 +10407,12 @@ ul.office-location li {
 }
 ul.office-location li p,
 ul.office-location li a {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(0.9rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   ul.office-location li p,
   ul.office-location li a {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
 }
 ul.office-location li i {
@@ -10421,7 +10421,7 @@ ul.office-location li i {
 }
 @media (min-width: 1200px) {
   ul.office-location li i {
-    font-size: 2rem;
+    font-size: 0.9rem;
   }
 }
 header .top-header {
@@ -10676,7 +10676,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 .body-top-section .text-container h1,
 .body-top-section .text-container .h1 {
-  font-size: calc(1.525rem + 3.3vw);
+  font-size: calc(1.25rem + 3.3vw);
   font-weight: bold;
   line-height: 4.5rem;
 }
@@ -10787,7 +10787,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
   ul {
   display: flex;
   list-style: none;
-  padding-left: 0;
+  padding-left: 25px;
 }
 .hero-section
   .carousel-inner
@@ -10920,7 +10920,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 .hero-section .carousel-inner .carousel-item .caption-container .caption-title {
   text-align: center;
-  font-size: calc(1.425rem + 2.1vw);
+  font-size: calc(1.625rem + 2.1vw);
   text-transform: uppercase;
   margin: 2rem 0;
 }
@@ -10930,7 +10930,8 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
     .carousel-item
     .caption-container
     .caption-title {
-    font-size: 3rem;
+    font-size: 1.625rem;
+    padding-left: 25px;
   }
 }
 @media (max-width: 575.98px) {
@@ -11099,7 +11100,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 @media (min-width: 1200px) {
   .about-home .about-container .heading-main-container .heading-main {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 .about-home .about-container .heading-main-container .two-line .line2 {
@@ -11109,11 +11110,12 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
   background-color: #fcfcfc;
 }
 .about-home .about-container .about-description {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(.9375rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   .about-home .about-container .about-description {
-    font-size: 1.5rem;
+    font-size: 0.9375
+    rem;
   }
 }
 .about-home .about-container .about-service {
@@ -11229,7 +11231,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
   }
 }
 .apply-now .text-content {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(0.9375rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   .apply-now .text-content {
@@ -11270,7 +11272,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 .student-say .grid-container .heading-col h1,
 .student-say .grid-container .heading-col .h1 {
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: calc(1.25rem + 4.5vw);
   font-weight: normal;
 }
 @media (min-width: 1200px) {
@@ -11311,7 +11313,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 @media (min-width: 1200px) {
   .student-say .grid-container .review-col .review-text .text-content {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
   }
 }
 .student-say .grid-container .review-col .review-text .footer-text {
@@ -11439,21 +11441,21 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 }
 .why-choose .why-content .text-col .text-card h5,
 .why-choose .why-content .text-col .text-card .h5 {
-  font-size: calc(1.3125rem + 0.75vw);
+  font-size: calc(0.9375rem + 0.75vw);
   margin-bottom: 1rem;
 }
 @media (min-width: 1200px) {
   .why-choose .why-content .text-col .text-card h5,
   .why-choose .why-content .text-col .text-card .h5 {
-    font-size: 1.875rem;
+    font-size: 0.9375rem;
   }
 }
 .why-choose .why-content .text-col .text-card p {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(0.9275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
   .why-choose .why-content .text-col .text-card p {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
   }
 }
 .why-choose .why-content .text-col .text-card .btn-row {
@@ -11473,13 +11475,13 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 @media (min-width: 1200px) {
   .why-choose .why-content .text-col .text-card .btn-row button,
   .why-choose .why-content .text-col .text-card .btn-row a {
-    font-size: 1.5rem;
+    font-size: 0.9375rem;
   }
 }
 @media (max-width: 767.98px) {
   .why-choose .why-content .text-col .text-card .btn-row button,
   .why-choose .why-content .text-col .text-card .btn-row a {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
   }
 }
 .advice-text-banner {
@@ -11597,8 +11599,8 @@ section.accreditations .accreditations-slick-container .slick-list {
   overflow: hidden;
 }
 .study-abroad {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 .study-abroad .heading-main-container {
   align-items: center;
