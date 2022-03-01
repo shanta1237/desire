@@ -11,11 +11,51 @@
     <title>Desire Education Consultancy</title>
     <link rel="shortcut icon" href="favicon.png" />
     <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="popup">
+    <div class="popup" id="pop">
       <button id="close">&times;</button>
-      <img src="shoe.jpg" alt="" style="object-fit: cover" />
+      <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="img-container overlap-right">
+              <img src=downloads.jpg class="d-block" alt="asd" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="img-container overlap-right">
+              <img src=download.jpg class="d-block
+              w-100" alt="asfasfass" style="height: 100%; width: 100vh;">
+            </div>
+          </div>
+
+          
+          <div class="carousel-item">
+            <div class="img-container overlap-right">
+              <img src=shoe.jpg class="d-block
+              w-100" alt="first" style="height: 100%; width: 100%;">
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
     </div>
     <div class="wrapper">
       <header>
@@ -180,30 +220,14 @@
               <span>Enquire Now</span>
             </button>
           </div>
-          <div
-            id="demo"
-            class="carousel slide carousel-fade"
-            data-bs-ride="carousel"
-          >
+          <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#demo"
-                data-bs-slide-to="0"
-                class="active"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#demo"
-                data-bs-slide-to="1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#demo"
-                data-bs-slide-to="2"
-              ></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" ></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1" ></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2" ></button>
             </div>
             <div class="carousel-inner">
+
               <div class="carousel-item active">
                 <div class="caption-container overlap-left">
                   <div class="caption-top">
@@ -239,7 +263,7 @@
                 </div>
                 <div class="img-container overlap-right">
                   <img src=assets/images/carousel-image.png class="d-block
-                  w-100" alt="">
+                  w-100" alt="ss">
                 </div>
               </div>
               <div class="carousel-item">
@@ -273,7 +297,7 @@
                 </div>
                 <div class="img-container overlap-right">
                   <img src=assets/images/carousel-image.png class="d-block
-                  w-100" alt="">
+                  w-100" alt="aaa">
                 </div>
               </div>
               <div class="carousel-item">
@@ -307,7 +331,7 @@
                 </div>
                 <div class="img-container overlap-right">
                   <img src=assets/images/carousel-image.png class="d-block
-                  w-100" alt="">
+                  w-100" alt="ddd">
                 </div>
               </div>
             </div>
@@ -339,38 +363,35 @@
           </div>
           <div class="row justify-content-between">
             <div class="col-md-6 col-lg-3 col-cont">
-              <div class="col-cont-main">
-                <div class="circle-img">
-                  <img src=assets/images/Test-Preparation-Classes.png alt="">
+                <div class=col-cont-main>
+                    <div id="demo1" onmouseover="mouseOver()" onmouseout="mouseOut()" class="demo1 circle-img ">
+                        <img src=assets/images/Test-Preparation-Classes.png alt="">
+                    </div>
+                    <h6>Test Preparation</h6>
                 </div>
-                <h6>Test Preparation</h6>
-              </div>
             </div>
             <div class="col-md-6 col-lg-3 col-cont">
-              <div class="col-cont-main">
-                <div class="circle-img">
-                  <img src=assets/images/education-counselor.png alt="">
+                <div class=col-cont-main>
+                    <div id="demo2" onmouseover="mouseover()" onmouseout="mouseout()" class=" circle-img "> <img
+                            src=assets/images/education-counselor.png alt=""> </div>
+                    <h6>Expert Counseling</h6>
                 </div>
-                <h6>Expert Counseling</h6>
-              </div>
             </div>
             <div class="col-md-6 col-lg-3 col-cont">
-              <div class="col-cont-main">
-                <div class="circle-img">
-                  <img src=assets/images/Lodge-Visa-documents.png alt="">
+                <div class=col-cont-main>
+                    <div id="demo3" class="circle-img" onmouseover="mouseoveR()" onmouseout="mouseouT()"> <img
+                            src=assets/images/Lodge-Visa-documents.png alt=""> </div>
+                    <h6>Easy Documentation</h6>
                 </div>
-                <h6>Easy Documentation</h6>
-              </div>
             </div>
             <div class="col-md-6 col-lg-3 col-cont">
-              <div class="col-cont-main">
-                <div class="circle-img">
-                  <img src=assets/images/exam-2.png alt="">
+                <div class=col-cont-main>
+                    <div id="demo4" onmouseover="Mouseover()" onmouseout="Mouseout()" class="circle-img"> <img
+                            src=assets/images/exam-2.png alt=""> </div>
+                    <h6>Test Preparation</h6>
                 </div>
-                <h6>Test Preparation</h6>
-              </div>
             </div>
-          </div>
+        </div>
         </section>
         <section class="about-home">
           <div class="container">
@@ -606,9 +627,10 @@
                           Maecenas tortor justo, mattis sed lobortis ut,
                           venenatis eget erat.
                         </p>
+                        <br>
                         <div class="footer-text text-center">
                           <p>Hari kumar Jha 2</p>
-                          <span>CEO 2</span>
+                         
                         </div>
                       </div>
                     </div>
@@ -634,7 +656,7 @@
                         </p>
                         <div class="footer-text text-center">
                           <p>Hari kumar Jha</p>
-                          <span>CEO</span>
+                          
                         </div>
                       </div>
                     </div>
@@ -660,7 +682,7 @@
                         </p>
                         <div class="footer-text text-center">
                           <p>Hari kumar Jha 3</p>
-                          <span>CEO 2</span>
+                          
                         </div>
                       </div>
                     </div>
@@ -751,7 +773,7 @@
                             in lectus scelerisque maximus.
                           </p>
                           <div class="btn-row">
-                            <a href="about.html" class="btn btn-white"
+                            <a  class="btn btn-white" id="mybttn"
                               >Contact Us Today</a
                             >
                             <button class="btn btn-white">
@@ -866,34 +888,18 @@
               </div>
             </div>
             <div class="row study-abroad-row">
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
+              <div class=accreditations-slick-container>
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-80.png alt="">
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-73.png alt="">
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-73.png alt="">
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-74.png alt="">
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-74.png alt="">
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-77.png alt="">
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-77.png alt="">
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-79.png alt="">
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-79.png alt="">
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-76.png alt="">
+                <div class=img-container> <img class="slider" src=assets/images/Rectangle-76.png alt="">
                 </div>
               </div>
             </div>
@@ -959,24 +965,12 @@
           <div class="container">
             <div class="row">
               <div class="accreditations-slick-container">
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
-                <div class="img-container">
-                  <img src=assets/images/Rectangle-80.png alt="">
-                </div>
+                <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
+                        <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
+                        <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
+                        <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
+                        <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
+                        <div class=img-container> <img src=assets/images/Rectangle-80.png alt=""> </div>
               </div>
             </div>
           </div>
@@ -1036,11 +1030,6 @@
         </div>
         <div class="footer-bottom container-fluid">
           <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <p class="font-bold text-center">
-                DESIRE EDUCATION <br />CONSULTANCY
-              </p>
-            </div>
             <div class="col-md-6 col-lg-4">
               <p>© Copyright 2021 ALL rights reserve. Desire Consultancy</p>
             </div>
