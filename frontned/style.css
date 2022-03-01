@@ -10424,6 +10424,7 @@ ul.office-location li i {
     font-size: 2rem;
   }
 }
+
 header .top-header {
   background-image: url(assets/images/top-header.png);
   background-size: 100% 100%;
@@ -10505,6 +10506,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container {
   padding: 0 1.25rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 @media (max-width: 767.98px) {
   nav.custom-nav .nav-content .nav-icon-address .icon-text-container {
@@ -10709,15 +10711,15 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
   background: #8a0b0b;
   position: fixed;
   transform: rotateZ(180deg);
-  max-width: 45px;
-  max-height: 170px;
+  max-width: 40px;
+  max-height: 160px;
   width: 100%;
   height: 100%;
   color: white;
   -ms-writing-mode: tb-rl !important;
   writing-mode: vertical-rl !important;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
   top: 50%;
   z-index: 9;
   right: 0;
@@ -12377,4 +12379,70 @@ p.text-description {
 }
 body {
   background: #ffffff;
+}
+
+.top-header .row .col-md-9 .icon-text-container {
+  display: flex;
+  align-items: center;
+}
+.top-header .row .col-7 .icon-text-container {
+  display: flex!important;
+  align-items: center!important; 
+  align-content: center!important;
+}
+
+.popup{
+  display: none;
+  background-color: #ffffff;
+  align-content: center;
+  height: 85vh;
+  width: 70vh;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+}
+.wrapper.blur{
+  -webkit-filter: blur(8px);
+         -moz-filter: blur(8px);
+           -o-filter: blur(8px);
+          -ms-filter: blur(8px);
+              filter: blur(8px);
+}
+.popup img{
+/* position: absolute; */
+object-fit: contain;
+width: 100%;
+height: auto;
+
+}
+.popup button{
+  display: flex;
+  margin:  0 0 0px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: black;
+  /* background: #03549a; */
+  /* border-radius: 100%; */
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+.popup{
+  width: 70%;
+  height: 50%;
+}
+.popup button{
+  display: flex;
+  margin:  0 0 0px auto;
+  background-color: transparent;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 }
