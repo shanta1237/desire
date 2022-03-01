@@ -12769,7 +12769,8 @@ p {
 }
 
 .footer-section .footer-main .text-col .useful-links ul li {
-    font-size: 0.9375rem;;
+    font-size: 0.9375rem;
+    ;
     margin-top: 0.25rem
 }
 
@@ -12845,13 +12846,13 @@ ul.office-location li a {
 
     ul.office-location li p,
     ul.office-location li a {
-        font-size:0.9375rem;
+        font-size: 0.9375rem;
     }
 }
 
 ul.office-location li i {
     margin-right: 1rem;
-    font-size:0.9375rem;
+    font-size: 0.9375rem;
 }
 
 @media (min-width: 1200px) {
@@ -13223,6 +13224,12 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
     }
 }
 
+.slida {
+    background: rgb(126, 14, 0);
+    background: linear-gradient(90deg, rgba(126, 14, 0, 1) 0%, rgba(193, 20, 46, 1) 62%);
+    padding-left: 50px;
+}
+
 .hero-section .enquiry-button .text-container span {
     -ms-writing-mode: tb-rl !important;
     writing-mode: vertical-rl !important
@@ -13299,7 +13306,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
 .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li h6,
 .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li .h6 {
-    font-size: calc(1.3125rem + .75vw);
+    font-size: 1.5rem;
     line-height: 2.2rem
 }
 
@@ -13307,7 +13314,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
     .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li h6,
     .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li .h6 {
-        font-size: 1.875rem
+        font-size: 1.5rem;
     }
 }
 
@@ -13315,7 +13322,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
     .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li h6,
     .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li .h6 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 1rem;
         text-shadow: 1px 1px 2px black
     }
@@ -13331,7 +13338,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
 .hero-section .carousel-inner .carousel-item .caption-container .caption-top ul li .img-container {
     width: 4.39rem;
-    margin-right: 2rem
+    margin-right: 1rem
 }
 
 @media (max-width: 575.98px) {
@@ -13350,20 +13357,21 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
 .hero-section .carousel-inner .carousel-item .caption-container .caption-title {
     text-align: center;
-    font-size: calc(1.425rem + 2.1vw);
+    font-size: 1.25rem;
     text-transform: uppercase;
     margin: 2rem 0
 }
 
 @media (min-width: 1200px) {
     .hero-section .carousel-inner .carousel-item .caption-container .caption-title {
-        font-size: 3rem
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 575.98px) {
     .hero-section .carousel-inner .carousel-item .caption-container .caption-title {
-        font-size: calc(1.325rem + .9vw);
+        font-size: 1.25rem;
+        ;
         line-height: 2rem;
         margin: 0.5rem 0
     }
@@ -13371,7 +13379,7 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
 @media (max-width: 575.98px) and (min-width: 1200px) {
     .hero-section .carousel-inner .carousel-item .caption-container .caption-title {
-        font-size: 2rem
+        font-size: 1.25rem;
     }
 }
 
@@ -13401,7 +13409,8 @@ nav.custom-nav .nav-content .nav-icon-address .icon-text-container:last-child {
 
 .hero-section .carousel-inner .carousel-item .caption-container .caption-buttons button,
 .hero-section .carousel-inner .carousel-item .caption-container .caption-buttons a {
-    margin-left: 2rem
+    margin-left: 2rem;
+    font-size: 1.235rem;
 }
 
 @media (max-width: 575.98px) {
@@ -14147,10 +14156,12 @@ section.accreditations .accreditations-slick-container .slick-list {
     border-radius: 0.93rem;
     overflow: hidden
 }
-.slider{
+
+.slider {
     width: 100%;
     padding-right: 50px;
 }
+
 .study-abroad-row .img-container img {
     height: 100%;
     width: 100%;
@@ -14165,8 +14176,7 @@ section.accreditations .accreditations-slick-container .slick-list {
 
 .about-page .desire-mission .top-heading {
     color: #072992;
-    font-size: 1.625rem
-    margin-bottom: 1rem:
+    font-size: 1.625rem margin-bottom: 1rem:
 }
 
 @media (min-width: 1200px) {
