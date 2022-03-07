@@ -1,0 +1,58 @@
+<section class="hero-section">
+
+    <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators"> <button type="button" data-bs-target="#demo" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            @foreach ($banners as $banner)
+                <div class="carousel-item active">
+                    <div class="caption-container overlap-left">
+                        <div class="caption-top">
+                            <ul>
+                                <li>
+                                    <div class="img-container"> <img
+                                            src="{{ asset('assets/images/graduated-1.png') }}" alt=""> </div>
+                                    <h6>STUDY <br>ABROAD</h6>
+                                </li>
+                                <li>
+                                    <div class="img-container"> <img src="{{ asset('assets/images/exam-1.png') }}"
+                                            alt="">
+                                    </div>
+                                    <h6>Test Preparation</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <h1 class="caption-title mx-auto"> WANNA UPGRADE YOUR <br> STUDIES ABROAD ? </h1>
+                        <div class="caption-buttons"> 
+                            <a href="#applyNow" id="apply-link" id="apply-link"
+                                class="btn btn-white">Apply now</a> 
+                            <a href={{ route('about') }}
+                                class="btn btn-white">Contact
+                                Us</a> 
+                        </div>
+                    </div>
+                    <div class="img-container overlap-right"> <img src="{{ $banner->photo }}"
+                                class="d-block w-100" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        @endforeach
+
+    </div>
+
+
+    </div> <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"> <span
+            class="carousel-control-prev-icon"></span> </button> <button class="carousel-control-next" type="button"
+        data-bs-target="#demo" data-bs-slide="next"> <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+
+
+</section>
