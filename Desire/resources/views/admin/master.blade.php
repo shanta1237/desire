@@ -24,9 +24,6 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            @include('admin.body.footer')
-            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
@@ -63,6 +60,7 @@
         $('#lfm').filemanager('file');
         $('#lfm1').filemanager('file');
         $('#lfm2').filemanager('file');
+        $('#lfm3').filemanager('file');
     </script>
     <script>
         ClassicEditor

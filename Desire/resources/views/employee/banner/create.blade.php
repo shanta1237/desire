@@ -73,6 +73,9 @@
                                         <option value="accreditions" {{ old('condition') == 'accreditions' ? 'selected' : '' }}>
                                             Accreditions
                                         </option>
+                                        <option value="popup" {{ old('condition') == 'popup' ? 'selected' : '' }}>
+                                            Pop Up
+                                        </option>
                                         <option value="university" {{ old('condition') == 'university' ? 'selected' : '' }}>
                                             University
                                         </option>

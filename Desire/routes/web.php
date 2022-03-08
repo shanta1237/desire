@@ -25,9 +25,15 @@ Route::post('enquery-form',[\App\Http\Controllers\Frontend\IndexController::clas
 Route::get('About-us',[\App\Http\Controllers\Frontend\AboutController::class,'index'])->name('about');
 Route::get('Testimonials',[\App\Http\Controllers\Frontend\TestimonialController::class,'index'])->name('testimonials');
 Route::get('Our-team',[\App\Http\Controllers\Frontend\TeamController::class,'index'])->name('team');
+// team page
+Route::get('Our-team/{id}/',[\App\Http\Controllers\Frontend\TeamController::class,'show'])->name('team.details');
 Route::get('Our-services',[\App\Http\Controllers\Frontend\ServiceController::class,'index'])->name('services');
 Route::get('Our_Offers',[\App\Http\Controllers\Frontend\OfferController::class,'index'])->name('offers');
 Route::get('Blog',[\App\Http\Controllers\Frontend\BlogController::class,'index'])->name('blog');
+Route::get('Blog-details/{slug}/',[\App\Http\Controllers\Frontend\BlogController::class,'show'])->name('blog.details');
+Route::get('Study',[\App\Http\Controllers\Frontend\stydy::class,'index'])->name('study');
+//Product category
+Route::get('destination/{id}/',[\App\Http\Controllers\Frontend\IndexController::class,'destinationCategory'])->name('destinationa.category');
 Route::POST('/contact-add',[ContactController::class,'contact_store'])->name('contact.store');
 
 Route::middleware(['auth','isAdmin'])->group(function () {
@@ -37,15 +43,19 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     // Destination
     Route::get('/admin/destination/all/category',[\App\Http\Controllers\destinationController::class,'index'])->name('list.destination');
     Route::post('admin/destination/category_status',[\App\Http\Controllers\destinationController::class,' destinationStatus'])->name('destination.status');
-    Route::get('/admin/destination/adddestination',[\App\Http\Controllers\destinationControlleroller::class,'createdestination'])->name('list.createdestination');
-    Route::post('/admin/destination/add',[\App\Http\Controllers\destinationController::class,'destinationstore'])->name('list.store');
-    Route::get('/admin/blogcategory/editmain/{id}',[\App\Http\Controllers\destinationController::class,'blogedit'])->name('blogcategory.edit');
-    Route::put('/admin/blogcategory/update/{id}',[\App\Http\Controllers\destinationController::class,'blogupdate'])->name('blogcategory.update');
-    Route::delete('/admin/blogcategory/delete/{id}',[\App\Http\Controllers\destinationController::class,'blogdestroy'])->name('blogcategory.destroy');
+    Route::get('/admin/destination/adddestination',[\App\Http\Controllers\destinationController::class,'createdestination'])->name('list.createdestination');
+    Route::post('/admin/destination/add',[\App\Http\Controllers\destinationController::class,'destinationstore'])->name('destination.store');
+    Route::get('/admin/destination/editmain/{id}',[\App\Http\Controllers\destinationController::class,'destinationedit'])->name('destination.edit');
+    Route::put('/admin/destination/update/{id}',[\App\Http\Controllers\destinationController::class,'destinationupdate'])->name('destination.update');
+    Route::delete('/admin/destination/delete/{id}',[\App\Http\Controllers\destinationController::class,'destinationdestroy'])->name('destination.destroy');
     // Blog
     Route::resource('/adminblog',\App\Http\Controllers\adminblogController::class);
     Route::post('adminblog_status',[\App\Http\Controllers\adminblogController::class,'adminbannerStatus'])->name('adminbanner.status');
-    // Banner Section
+     // Country
+     Route::resource('/country',\App\Http\Controllers\countryController::class);
+     Route::post('country_status',[\App\Http\Controllers\countryController::class,'countryStatus'])->name('country.status');
+    
+     // Banner Section
     Route::resource('/banner',\App\Http\Controllers\BannerController::class);
     Route::post('banner_status',[\App\Http\Controllers\BannerController::class,'bannerStatus'])->name('banner.status');
     // Create Testimonials
@@ -78,13 +88,19 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     // for About Page in admin
     Route::get('admin/edit/aboutuspage',[\App\Http\Controllers\AboutController::class,'index'])->name('about.index');
     Route::put('aboutus/update',[\App\Http\Controllers\AboutController::class,'update'])->name('aboutus.update');
-    // for services
+     // for House Page in admin
+     Route::get('admin/Home/edithomepage',[\App\Http\Controllers\HouseController::class,'index'])->name('house.index');
+     Route::put('House/update',[\App\Http\Controllers\HouseController::class,'update'])->name('house.update');
+    // for services Page in admin
     Route::get('admin/edit/services',[\App\Http\Controllers\ServiceController::class,'index'])->name('services.index');
     Route::put('services/update',[\App\Http\Controllers\ServiceController::class,'update'])->name('services.update');
     // setting Route
     Route::get('admin/setting',[\App\Http\Controllers\SettingsController::class,'index'])->name('setting.index');
     Route::put('admin/setting/Update',[\App\Http\Controllers\SettingsController::class,'settingsUpdate'])->name('setting.update');
-
+    Route::get('admin/logout',[\App\Http\Controllers\IndexController::class,'logout'])->name('admin.logout');
+    //User Account change Password
+    Route::get('/admin/changepassword',[\App\Http\Controllers\HouseController::class,'adminAccount'])->name('admin.account');
+    Route::post('/admin/update/account/{id}', [ \App\Http\Controllers\HouseController::class, 'adminupdateAccount'])->name('adminupdate.account');
 });;
  
 Auth::routes();
@@ -100,6 +116,19 @@ Route::middleware(['auth','isEmployee'])->group(function () {
     // Banner Section
     Route::resource('/employeebanner',\App\Http\Controllers\Employee\employeebannerController::class);
     Route::post('employeebanner_status',[\App\Http\Controllers\Employee\employeebannerController::class,'employeebannerStatus'])->name('employeebanner.status');
+    
+    // Destination
+    Route::get('/employee/destination/all/category',[\App\Http\Controllers\Employee\employeedestinationController::class,'index'])->name('employee.destination');
+    Route::post('employee/destination/category_status',[\App\Http\Controllers\Employee\employeedestinationController::class,' employeedestinationStatus'])->name('employeedestination.status');
+    Route::get('/employee/destination/adddestination',[\App\Http\Controllers\Employee\employeedestinationController::class,'employeecreatedestination'])->name('employeelist.createdestination');
+    Route::post('/employee/destination/add',[\App\Http\Controllers\Employee\employeedestinationController::class,'employeedestinationstore'])->name('employeedestination.store');
+    Route::get('/employee/destination/editmain/{id}',[\App\Http\Controllers\Employee\employeedestinationController::class,'employeedestinationedit'])->name('employeedestination.edit');
+    Route::put('/employee/destination/update/{id}',[\App\Http\Controllers\Employee\employeedestinationController::class,'employeedestinationupdate'])->name('employeedestination.update');
+    Route::delete('/employee/destination/delete/{id}',[\App\Http\Controllers\Employee\employeedestinationController::class,'employeedestinationdestroy'])->name('employeedestination.destroy');
+     // Country
+     Route::resource('/employeecountry',\App\Http\Controllers\Employee\employeecountryController::class);
+     Route::post('employee/country_status',[\App\Http\Controllers\Employee\employeecountryController::class,'employeecountryStatus'])->name('employeecountry.status');
+    
     // Contact us page
     Route::get('/employee/contact',[\App\Http\Controllers\Employee\employeecontactController::class,'index'])->name('employeelist.contact');
     Route::delete('/employee/contact/{id}',[\App\Http\Controllers\Employee\employeecontactController::class,'destroy'])->name('employeecontact.destroy');
@@ -123,9 +152,23 @@ Route::middleware(['auth','isEmployee'])->group(function () {
     Route::get('/employee/blogcategory/editmain/{id}',[\App\Http\Controllers\Employee\BlogcategoryController::class,'employeeblogedit'])->name('employeeblogcategory.edit');
     Route::put('/employee/blogcategory/update/{id}',[\App\Http\Controllers\Employee\BlogcategoryController::class,'employeeblogupdate'])->name('employeeblogcategory.update');
     Route::delete('/employee/blogcategory/delete/{id}',[\App\Http\Controllers\Employee\BlogcategoryController::class,'employeeblogdestroy'])->name('employeeblogcategory.destroy');
-
-    // setting Route
-    Route::get('admin/setting',[\App\Http\Controllers\SettingsController::class,'index'])->name('setting.index');
-    Route::put('admin/setting/Update',[\App\Http\Controllers\SettingsController::class,'settingsUpdate'])->name('setting.update');
+     // setting Route
+     Route::get('employee/setting',[\App\Http\Controllers\Employee\SettingsController::class,'employeeindex'])->name('employeesetting.index');
+     Route::put('employee/setting/Update',[\App\Http\Controllers\Employee\SettingsController::class,'employeesettingsUpdate'])->name('employeesetting.update');
+        // for About Page in admin
+    Route::get('employee/edit/aboutuspage',[\App\Http\Controllers\Employee\AboutController::class,'index'])->name('employeeaboutus.index');
+    Route::put('employee/aboutus/update',[\App\Http\Controllers\Employee\AboutController::class,'update'])->name('employeeaboutus.update');
+     // for House Page in admin
+     Route::get('employee/Home/edithomepage',[\App\Http\Controllers\Employee\HouseController::class,'index'])->name('employeehouse.index');
+     Route::put('employee/House/update',[\App\Http\Controllers\Employee\HouseController::class,'update'])->name('employeehouse.update');
+    // for services Page in admin
+    Route::get('employee/edit/services',[\App\Http\Controllers\Employee\ServiceController::class,'index'])->name('employeeservices.index');
+    Route::put('employee/services/update',[\App\Http\Controllers\Employee\ServiceController::class,'update'])->name('employeeservices.update');
+    // Blog
+    Route::resource('/Employee/blog',\App\Http\Controllers\Employee\employeeblogController::class);
+    Route::post('Employeeblog_status',[\App\Http\Controllers\Employee\employeeblogController::class,'employeeblogStatus'])->name('employeebanner.status');
+    //User Account change Password
+    Route::get('/employee/changepassword',[\App\Http\Controllers\Employee\HouseController::class,'userAccount'])->name('user.account');
+    Route::post('/update/account/{id}', [ \App\Http\Controllers\Employee\HouseController::class, 'updateAccount'])->name('update.account');
 
 });

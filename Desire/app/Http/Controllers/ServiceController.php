@@ -13,6 +13,7 @@ class ServiceController extends Controller
     public function update(Request $request){
         $services=Offer::first();
         $status = $services->update([
+            'photo'=>$request->input('photo'),
             'offer_desc'=>$request->input('offer_desc'),
         ]);
         if($status){

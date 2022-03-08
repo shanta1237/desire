@@ -1,5 +1,11 @@
+@php
+	use App\Models\Destination;
+	$destination = Destination::all();
+@endphp
 <header>
-    <div class="top-header container-fluid">
+    <div class="top-header container-fluid" style="background-image: url(assets/images/top-header.png);
+    background-size: 100% 100%;
+    height: 3rem">
         <div class="row align-items-center justify-items-center h-100">
             <div class="col-md-9 col-7"></div>
             <div class="col-md-3 col-5 text-white">
@@ -57,25 +63,27 @@
         </svg>
     </div>
     <ul id=nav-menu-items class=d-md-none>
-        <li><a href="{{ route('index') }}" class=active>Home</a></li>
-        <li><a href="{{ route('about') }}">About Us</a></li>
-        <li><a href="{{ route('team') }}">Our Team</a></li>
-        <li><a href="{{ route('services') }}">Services</a></li>
-        <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
+        <li><a href="{{ route('index') }}" class="{{ (request()->is('/')) ? 'active' : '' }}">Home</a></li>
+        <li><a href="{{ route('about') }}" class="{{ (request()->is('About-us')) ? 'active' : '' }}">About Us</a></li>
+        <li><a href="{{ route('team') }}" class="{{ (request()->is('Our-team')) ? 'active' : '' }}">Our Team</a></li>
+        <li><a href="{{ route('services') }}" class="{{ (request()->is('Our-services')) ? 'active' : '' }}">Services</a></li>
+        <li><a href="{{ route('testimonials') }}" class="{{ (request()->is('Testimonials')) ? 'active' : '' }}">Testimonials</a></li>
         <li>
             <div class=dropdown> <a class=dropdown-toggle href=# role=button id=dropdownMenuLink data-bs-toggle=dropdown
                     aria-expanded=false> Destination </a>
+                
                 <ul class=dropdown-menu aria-labelledby=dropdownMenuLink>
-                    <li><a class=dropdown-item href=study-detail.html>USA</a></li>
-                    <li><a class=dropdown-item href=study-detail.html>UK</a></li>
-                    <li><a class=dropdown-item href=study-detail.html>Canada</a></li>
-                </ul>
+                    @foreach ($destination as $item)
+                    <li><a href="{{ url('destination/' .$item->id) }}" class=dropdown-item href=study-detail.html>{{ $item->title }}</a></li>
+                    @endforeach
+                </ul> 
+                
             </div>
         </li>
-        <li><a href="{{ route('offers') }}">Our Offers</a></li>
-        <li><a href="{{ route('blog') }}">Blog</a></li>
+        <li><a href="{{ route('offers') }}" class="{{ (request()->is('Our_Offers')) ? 'active' : '' }}">Our Offers</a></li>
+        <li><a href="{{ route('blog') }}" class="{{ (request()->is('Blog')) ? 'active' : '' }}">Blog</a></li>
         <li>
-            <div><a href="{{ route('contact') }}">Contact us</a></div>
+            <div><a href="{{ route('contact') }}" class="{{ (request()->is('contact')) ? 'active' : '' }}">Contact us</a></div>
         </li>
     </ul>
 </div>

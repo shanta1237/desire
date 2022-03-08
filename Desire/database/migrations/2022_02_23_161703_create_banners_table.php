@@ -20,7 +20,7 @@ class CreateBannersTable extends Migration
             $table->longText('description')->nullable();
             $table->string('photo');
             $table->enum('status',['active','inactive'])->default('inactive');
-            $table->enum('condition',['slider','accreditions','university'])->default('slider');
+            $table->enum('condition',['slider','accreditions','university','popup'])->default('slider');
             $table->timestamps();
         });
     }

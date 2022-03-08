@@ -49,7 +49,7 @@ class employeebannerController extends Controller
            'description'=>'string|nullable',
            'photo'=>'required',
            'slug'=>'string|nullable',
-           'condition' => 'nullable|in:slider,accreditions,university',
+           'condition' => 'nullable|in:slider,accreditions,university,popup',
            'status' => 'nullable|in:active,inactive',
        ]);
 
@@ -107,7 +107,7 @@ class employeebannerController extends Controller
                 'description'=>'string|nullable',
                 'photo'=>'required',
                 'slug'=>'string|nullable',
-                'condition' => 'nullable|in:slider,accreditions,university',
+                'condition' => 'nullable|in:slider,accreditions,university,popup',
                 'status' => 'nullable|in:active,inactive',
             ]);
 

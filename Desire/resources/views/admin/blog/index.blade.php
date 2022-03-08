@@ -28,8 +28,6 @@
                                 <th>S.N</th>
                                 <th>Title</th>
                                 <th>description</th>
-                                <th>Written By</th>
-                                <th>Category</th>
                                 <th>Photo</th>
                                 <th>Status</th>
                                 <th>Actions</th>
@@ -40,8 +38,6 @@
                                 <th>S.N</th>
                                 <th>Title</th>
                                 <th>description</th>
-                                <th>Written by</th>
-                                <th>Category</th>
                                 <th>Photo</th>
                                 <th>Status</th>
                                 <th>Actions</th>
@@ -53,12 +49,6 @@
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$item->name}}</td>
                                     <td>{{ $item->description }}</td>
-                                    <td>@foreach (\App\Models\User::get() as $users)
-                                        <option value="{{ $users->id }}">{{ $users->name }}</option>
-                                    @endforeach</td>
-                                    <td>@foreach (\App\Models\Blogcategory::get() as $blogcategory)
-                                        <option value="{{ $blogcategory->id }}">{{ $blogcategory->name }}</option>
-                                    @endforeach</td>
                                     <td><img src="{{$item->photo}}" alt="Category images" style="max-height: 90px;max-width: 120px"></td>
                                     <td><input type="checkbox" name="toogle" value="{{$item->id}}" data-toggle="switchbutton" {{$item->status=='active'?'checked':''}} data-onlabel="active" data-offlabel="inactive" data-size="sm" data-onstyle="success" data-offstyle="danger">
                                     </td>

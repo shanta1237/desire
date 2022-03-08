@@ -20,6 +20,8 @@ class AboutController extends Controller
             'choose'=>$request->choose,
             'descchoose'=>$request->input('descchoose'),
             'message'=>$request->message,
+            'photo'=>$request->photo,
+            'photo1'=>$request->photo1,
             'descmessage'=>$request->input('descmessage'),
         ]);
         if($status){

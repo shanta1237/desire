@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('employee.master')
 
 
 @section('content')
@@ -29,7 +29,7 @@
                                         </div>
                                     @endif
                                 </div>
-                           <form action="{{ route('aboutus.update') }}" method="POST">
+                           <form action="{{ route('employeeaboutus.update') }}" method="POST">
                             @method('put')
                             @csrf
                             <div class="form-group mb-3">
@@ -57,6 +57,21 @@
                                     spellcheck="false">{{ $about->descmission }} </textarea>
                             </div>
                             <div class="form-group mb-3">
+                                <div>
+                                    <label for="">Photo :<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                 <span class="input-group-btn">
+                                     <a id="lfm" data-input="thumbnail" data-preview="holder"
+                                        class="btn btn-primary">
+                                         <i class="fa fa-picture-o"></i> Choose
+                                     </a>
+                                 </span>
+                                        <input id="thumbnail" class="form-control" type="text" name="photo" value="{{ $about->photo }}">
+                                    </div>
+                                    <div id="holder" style="margin-top:15px;max-height:100px;"> </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="">Why Choose Desire Education?
                                 </label>
                                 <input id="name" name="choose" placeholder="Why to choose desire Education?" value="{{ $about->choose }}"
@@ -73,6 +88,21 @@
                                 </label>
                                 <input id="name" name="message" placeholder="Message From M.D" value="{{ $about->message }}"
                                     type="text" class="form-control validate">
+                            </div>
+                            <div class="form-group mb-3">
+                                <div>
+                                    <label for="">Second Photo:<span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                 <span class="input-group-btn">
+                                     <a id="lfm1" data-input="thumbnail1" data-preview="holder1"
+                                        class="btn btn-primary">
+                                         <i class="fa fa-picture-o"></i> Choose
+                                     </a>
+                                 </span>
+                                        <input id="thumbnail1" class="form-control" type="text" name="photo1" value="{{ $about->photo1 }}">
+                                    </div>
+                                    <div id="holder1" style="margin-top:15px;max-height:100px;"> </div>
+                                </div>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="">Message From MD</label>

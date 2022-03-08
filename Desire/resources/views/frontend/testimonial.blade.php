@@ -30,11 +30,11 @@
                 <div class="testimonial-card bg-blue-17">
                     <div class=row>
                         <div class="col-lg-3 col-12">
-                            <div class=img-container> <img src="{{ $test->photo }}" alt=""> </div>
+                            <div class=img-container> <img src="{{ $test->photo }}" height="308px" width="312px" alt=""> </div>
                         </div>
                         <div class="col-lg-9 col-12">
                             <div class=testimonial-card-body>
-                                <p>{{ $test->desc }}</p>
+                                <p>{!! html_entity_decode($test->desc) !!}</p>
                                 <div class=testimonial-card-body-name>
                                     <div class=line></div>
                                     <h4>{{ $test->name }}</h4>
@@ -45,66 +45,6 @@
                 </div>
             </div>
             @endforeach
-            <div class="col-lg-12 col-md-6">
-                <div class="testimonial-card bg-red-eb">
-                    <div class=row>
-                        <div class="col-lg-3 col-12">
-                            <div class=img-container> <img src="{{ asset('assets/images/p-2.png') }}" alt=""> </div>
-                        </div>
-                        <div class="col-lg-9 col-12">
-                            <div class=testimonial-card-body>
-                                <p>"Desire Educational Consultancy (Best Education Consultancy in Kathmandu Nepal
-                                    for Australia | USA | Ielts Preparation Classes) was established in the locality
-                                    of Dillibazar, | USA | Ielts Preparation." </p>
-                                <div class=testimonial-card-body-name>
-                                    <div class=line></div>
-                                    <h4>Kabir Raj Shakya</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6">
-                <div class="testimonial-card bg-blue-17">
-                    <div class=row>
-                        <div class="col-lg-3 col-12">
-                            <div class=img-container> <img src="{{ asset('assets/images/p-3.png') }}" alt=""> </div>
-                        </div>
-                        <div class="col-lg-9 col-12">
-                            <div class=testimonial-card-body>
-                                <p>"Desire Educational Consultancy (Best Education Consultancy in Kathmandu Nepal
-                                    for Australia | USA | Ielts Preparation Classes) was established in the locality
-                                    of Dillibazar, | USA | Ielts Preparation." </p>
-                                <div class=testimonial-card-body-name>
-                                    <div class=line></div>
-                                    <h4>Kabir Raj Shakya</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6">
-                <div class="testimonial-card bg-red-eb">
-                    <div class=row>
-                        <div class="col-lg-3 col-12">
-                            <div class=img-container> <img src="{{ asset('assets/images/p-1.png') }}" alt=""> </div>
-                        </div>
-                        <div class="col-lg-9 col-12">
-                            <div class=testimonial-card-body>
-                                <p>"Desire Educational Consultancy (Best Education Consultancy in Kathmandu Nepal
-                                    for Australia | USA | Ielts Preparation Classes) was established in the locality
-                                    of Dillibazar, | USA | Ielts Preparation." </p>
-                                <div class=testimonial-card-body-name>
-                                    <div class=line></div>
-                                    <h4>Kabir Raj Shakya</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 </main>

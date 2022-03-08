@@ -19,70 +19,21 @@
     <section class=blog-area>
         <div class=container>
             <div class=row>
+                @foreach ($blogi as $bloge)
                 <div class=col-md-6>
-                    <div class=blog-card>
-                        <div class=img-container> <img src="{{ asset('assets/images/blog-card.png') }}" alt=""> </div>
-                        <div class=card-body> <span class=date-badge>01 Janurary 2022</span>
+                    <a href="{{route('blog.details',$bloge->slug)}}" style="color:black;"><div class=blog-card>
+                        <div class=img-container> <img src="{{ $bloge->photo}}" alt=""> </div>
+                        <div class=card-body> <span class=date-badge>{{ $bloge->created_at->diffForHumans() }}</span>
                             <div class=info-icon>
-                                <div> <i class=ic-user></i> <span>Desire Edu</span> </div>
-                                <div> <i class=ic-tag></i> <span>Desire Edu</span> </div>
+                                <div> <i class=ic-user></i> <span>{{ $bloge->cat_id }}</span> </div>
+                                <div> <i class=ic-tag></i> <span>{{ $bloge->user_id }}</span> </div>
                             </div>
-                            <h4 class=blog-title>Study In USA</h4>
-                            <p class=blog-description> If you’re someone who just completed a bachelor's and looking
-                                forward to a better opportunity for the future, then a M...f you’re someone who just
-                                completed a bachelor's and looking forward to a better opportunity for the future,
-                                then a M... </p>
+                            <h4 class=blog-title>{{ $bloge->name }}</h4>
+                            <p class=blog-description>{!! html_entity_decode($bloge->description) !!}</p>
                         </div>
-                    </div>
+                    </div></a>
                 </div>
-                <div class=col-md-6>
-                    <div class=blog-card>
-                        <div class=img-container> <img src="{{ asset('assets/images/blog-card.png') }}" alt=""> </div>
-                        <div class=card-body> <span class=date-badge>01 Janurary 2022</span>
-                            <div class=info-icon>
-                                <div> <i class=ic-user></i> <span>Desire Edu</span> </div>
-                                <div> <i class=ic-tag></i> <span>Desire Edu</span> </div>
-                            </div>
-                            <h4 class=blog-title>Study In USA</h4>
-                            <p class=blog-description> If you’re someone who just completed a bachelor's and looking
-                                forward to a better opportunity for the future, then a M...f you’re someone who just
-                                completed a bachelor's and looking forward to a better opportunity for the future,
-                                then a M... </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=col-md-6>
-                    <div class=blog-card>
-                        <div class=img-container> <img src="{{ asset('assets/images/blog-card.png') }}" alt=""> </div>
-                        <div class=card-body> <span class=date-badge>01 Janurary 2022</span>
-                            <div class=info-icon>
-                                <div> <i class=ic-user></i> <span>Desire Edu</span> </div>
-                                <div> <i class=ic-tag></i> <span>Desire Edu</span> </div>
-                            </div>
-                            <h4 class=blog-title>Study In USA</h4>
-                            <p class=blog-description> If you’re someone who just completed a bachelor's and looking
-                                forward to a better opportunity for the future, then a M...f you’re someone who just
-                                completed a bachelor's and looking forward to a better opportunity for the future,
-                                then a M... </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=col-md-6>
-                    <div class=blog-card>
-                        <div class=img-container> <img src="{{ asset('assets/images/blog-card.png') }}" alt=""> </div>
-                        <div class=card-body> <span class=date-badge>01 Janurary 2022</span>
-                            <div class=info-icon>
-                                <div> <i class=ic-user></i> <span>Desire Edu</span> </div>
-                                <div> <i class=ic-tag></i> <span>Desire Edu</span> </div>
-                            </div>
-                            <h4 class=blog-title>Study In USA</h4>
-                            <p class=blog-description> If you’re someone who just completed a bachelor's and looking
-                                forward to a better opportunity for the future, then a M...f you’re someone who just
-                                completed a bachelor's and looking forward to a better opportunity for the future,
-                                then a M... </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

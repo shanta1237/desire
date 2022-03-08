@@ -63,6 +63,7 @@
         $('#lfm').filemanager('file');
         $('#lfm1').filemanager('file');
         $('#lfm2').filemanager('file');
+        $('#lfm3').filemanager('file');
     </script>
     <script>
         ClassicEditor

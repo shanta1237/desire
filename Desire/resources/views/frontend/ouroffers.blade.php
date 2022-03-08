@@ -25,50 +25,13 @@
                         <h4 class=package-offer>{{ $item->title }}</h4>
                         <div class=img-container> <img src="{{ asset('assets/images/package-card.png') }}" alt=""> </div>
                         <div class=card-body>
-                            <p class=package-description>{{ $item->description }}</p>
+                            <p class=package-description>{!! html_entity_decode($item->description) !!}</p>
                             <a class="btn btn-primary" href="{{route('contact')}}">Contact us</a>
                         </div>
                         
                     </div>
                 </div>
                 @endforeach
-                
-                <div class=col-lg-6>
-                    <div class=package-card>
-                        <h4 class=package-offer>Free Ielts Services</h4>
-                        <div class=img-container> <img src="{{ asset('assets/images/package-card.png') }}" alt=""> </div>
-                        <div class=card-body>
-                            <p class=package-description> If you’re someone who just completed a bachelor's and
-                                looking forward to a better opportunity for the future, then a M...f you’re someone
-                                who just completed a bachelor's and looking forward to a better opportunity for the
-                                future, then a M... </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=col-lg-6>
-                    <div class=package-card>
-                        <h4 class=package-offer>Free Ielts Services</h4>
-                        <div class=img-container> <img src="{{ asset('assets/images/package-card.png') }}" alt=""> </div>
-                        <div class=card-body>
-                            <p class=package-description> If you’re someone who just completed a bachelor's and
-                                looking forward to a better opportunity for the future, then a M...f you’re someone
-                                who just completed a bachelor's and looking forward to a better opportunity for the
-                                future, then a M... </p>
-                        </div>
-                    </div>
-                </div>
-                <div class=col-lg-6>
-                    <div class=package-card>
-                        <h4 class=package-offer>Free Ielts Services</h4>
-                        <div class=img-container> <img src="{{ asset('assets/images/package-card.png') }}" alt=""> </div>
-                        <div class=card-body>
-                            <p class=package-description> If you’re someone who just completed a bachelor's and
-                                looking forward to a better opportunity for the future, then a M...f you’re someone
-                                who just completed a bachelor's and looking forward to a better opportunity for the
-                                future, then a M... </p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

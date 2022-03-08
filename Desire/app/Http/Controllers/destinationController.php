@@ -47,8 +47,23 @@ class destinationController extends Controller
      */
     public function destinationstore(Request $request)
     {
-        //
+        $this->validate($request,[
+            'title'=>'string|required',
+            'slug'=>'string|required',
+            'description'=>'string|nullable',
+            'photo'=>'required',
+            'status'=>'nullable|in:active,inactive'
+        ]);
+        $data= $request->all();
+        // return $data;
+        $status=Destination::create($data);
+        if($status){
+            return redirect()->route('list.destination')->with('success','Destination Created Successfully');
+        }else{
+            return back()->with('error','Something went wrong');
+        }
     }
+ 
 
     /**
      * Display the specified resource.
@@ -67,9 +82,15 @@ class destinationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function destinationedit($id)
     {
-        //
+        $destination=Destination::find($id);
+        if($destination){
+            return view('admin.destination.edit',compact('destination'));
+
+        }else{
+            return back()->with('error','Data not Found');
+        }
     }
 
     /**
@@ -79,9 +100,28 @@ class destinationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function destinationupdate(Request $request, $id)
     {
-        //
+        $destination=Destination::find($id);
+        if($destination){
+            $this->validate($request,[
+                'title'=>'string|required',
+                'description'=>'string|nullable',
+                'photo'=>'required',
+                'slug'=>'string|nullable',
+                'status' => 'nullable|in:active,inactive',
+            ]);
+            $data= $request->all();
+            $status=$destination->fill($data)->save();
+            if($status){
+                return redirect()->route('list.destination')->with('success','Destination Updated Successfully');
+            }else{
+                return back()->with('error','Something went wrong');
+            }
+
+        }else{
+            return back()->with('error','Data not Found');
+        }
     }
 
     /**
@@ -90,8 +130,19 @@ class destinationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destinationdestroy($id)
     {
-        //
+        {
+            $destination=Destination::find($id);
+            if($destination){
+               $status=$destination->delete();
+               if($status){
+                   return redirect()->route('list.destination')->with('success','Destination delete Successfully');
+               }
+    
+            }else{
+                return back()->with('error','Something went wrong');
+            }
+        }
     }
 }

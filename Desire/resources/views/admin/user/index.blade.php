@@ -68,7 +68,6 @@
                                     <td><input type="checkbox" name="toogle" value="{{$item->id}}" data-toggle="switchbutton" {{$item->status=='active'?'checked':''}} data-onlabel="active" data-offlabel="inactive" data-size="sm" data-onstyle="success" data-offstyle="danger">
                                     </td>
                                     <td>
-                                        <a href="{{route('user.edit',$item->id)}}" data-toggle="tooltip" class=" float-left btn btn-sm btn-outline-warning" title="edit" data-placement="bottom"><i class="fa fa-edit"></i></a>
                                         <form class="float-left ml-1" action="{{route('user.destroy',$item->id)}}" method="post">
                                             @csrf
                                             @method('delete')

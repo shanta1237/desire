@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('role_as')->default('0'); //Add in UserTable before timestamps
             $table->string('phone')->nullable();
             $table->string('photo')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('address')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();

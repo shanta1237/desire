@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Setting;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        return view('frontend.contact');
+        $setting = Setting::first();
+        return view('frontend.contact', compact('setting'));
     }
     public function ContactForm(Request $request)
     {
@@ -27,7 +29,7 @@ class ContactController extends Controller
             'message' => 'Your Message Sent Successfully',
             'alert-type' => 'success',
         );
-        return redirect()->back()->with($notification);
+        return redirect()->back()->with('success','Contact us Message Send Successfully');
     }
     
     

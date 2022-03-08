@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="form-group mb-3">
                                         <label for="">Description</label>
-                                        <textarea id="summernote" class="form-control validate" rows="10" name="description"
+                                        <textarea id="summernote" class="form-control validate" rows="10" name="desc"
                                             placeholder="Write some text..."
                                             spellcheck="false">{{ $testimonials->desc }}</textarea>
                                     </div>

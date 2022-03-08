@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -60,6 +60,21 @@
                 <h6 class="collapse-blog">Destination Category Menu</h6>
                 <a class="collapse-item" href="{{ route('list.destination') }}">All Destination Category</a>
                 <a class="collapse-item" href="{{ route('list.createdestination') }}">Add Destination Category</a>
+            </div>
+        </div>
+    </li>
+    {{-- Country --}}
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoqaa12a"
+            aria-expanded="true" aria-controls="collapseTwoqaa12a">
+            <i class="fas fa-fw fa-blog"></i>
+            <span>Countries</span>
+        </a>
+        <div id="collapseTwoqaa12a" class="collapse" aria-labelledby="headingTwoqaa12a" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-blog">Country</h6>
+                <a class="collapse-item" href="{{ route('country.index') }}">All Country</a>
+                <a class="collapse-item" href="{{ route('country.create') }}">Add Country</a>
             </div>
         </div>
     </li>
@@ -154,9 +169,7 @@
                 <h6 class="collapse-header">Page Menu</h6>
                 <a class="collapse-item" href="{{ route('about.index') }}">About Page</a>
                 <a class="collapse-item" href="{{ route('services.index') }}">Services Page</a>
-                <a class="collapse-item" href="cards.html">Add PAge</a>
-                <a class="collapse-item" href="cards.html">Add PAge</a>
-                <a class="collapse-item" href="cards.html">Add PAge</a>
+                <a class="collapse-item" href="{{ route('house.index') }}">Home page</a>
             </div>
         </div>
     </li>
@@ -174,6 +187,6 @@
             </div>
         </div>
     </li>
-
+    
 
 </ul>

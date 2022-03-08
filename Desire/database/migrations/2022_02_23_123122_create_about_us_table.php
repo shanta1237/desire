@@ -22,6 +22,8 @@ class CreateAboutUsTable extends Migration
             $table->text('choose')->nullable();
             $table->longText('descchoose')->nullable();
             $table->text('message')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('photo1')->nullable();
             $table->longText('descmessage')->nullable();
             $table->timestamps();
         });

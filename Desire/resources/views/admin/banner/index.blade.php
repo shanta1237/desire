@@ -60,6 +60,8 @@
                                             <span class="badge badge-success">{{$item->condition}}</span>
                                         @elseif($item->condition=='slider')
                                             <span class="badge badge-danger">{{$item->condition}}</span>
+                                        @elseif($item->condition=='popup')
+                                            <span class="badge badge-danger">{{$item->condition}}</span>
                                         @else
                                         <span class="badge badge-primary">{{$item->condition}}</span>
                                         @endif
